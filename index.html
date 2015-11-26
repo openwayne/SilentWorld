@@ -6,13 +6,17 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.0.min.js"></script>
 <!-- Custom Theme files -->
+	<link rel="stylesheet" href="css/style_login.css"> <!-- Gem style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="qc:admins" content="3436362747661431416375" />
 
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
 </script>
 <meta name="keywords" content="简静" />
 <!--Google Fonts-->
@@ -31,6 +35,7 @@
 <!-- //end-smoth-scrolling -->
 <link rel="stylesheet" type="text/css" href="css/common.css" />
 <link rel="stylesheet" type="text/css" href="css/style2.css" />
+
 </head>
 <body>
 <!--banner start here-->
@@ -39,7 +44,9 @@
    	 <div class="banner-main">
    		 <h1>简静之美，源于心生</h1>
    		 <p>SilentWorld工作室</p>
-   		 <a href="#news">看到更多</a>
+   		 <nav class="main-nav">
+   		 <a class="cd-signin" href="#0">登录</a>
+		</nav>
    		<div class="clearfix"> </div>
    	 </div>
    </div>
@@ -401,5 +408,106 @@
 	</div>
 </div>
 <!--footer end here-->
+
+
+
+<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">登录</a></li>
+				<li><a href="#0">创建</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signin-email">用户名</label>
+						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="请填写您的用户名">
+						<span class="cd-error-message">用户名错误!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">密码</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="请填写您的密码">
+						<a href="#0" class="hide-password">隐藏密码</a>
+						<span class="cd-error-message">密码错误!</span>
+					</p>
+
+					<p class="fieldset">
+<!-- 						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me"> 记住我</label>
+ -->
+						<label >合作伙伴登录: </label>
+						<a href="http://user.nilcity.com/users/qlogin"><img src="http://qzonestyle.gtimg.cn/qzone/vas/opensns/res/img/bt_white_24X24.png"></img></a>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="登录">
+					</p>
+				</form>
+				
+				<p class="cd-form-bottom-message"><a href="#0">忘记密码?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+
+			<div id="cd-signup"> <!-- sign up form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">用户名</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="用户名">
+						<span class="cd-error-message">用户名不符合要求!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">邮箱</label>
+						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="邮箱">
+						<span class="cd-error-message">邮箱不符合要求!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">密码</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="密码">
+						<a href="#0" class="hide-password">隐藏密码</a>
+						<span class="cd-error-message">密码不符合要求!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">我同意 <a href="#0">服务条款</a></label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Create account">
+					</p>
+				</form>
+
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-signup -->
+
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">真糟糕！忘记密码了？请输入您的邮箱地址，您将会收到新的密码，请妥善保存。</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">邮箱</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="邮箱">
+						<span class="cd-error-message">邮箱错误!</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Reset password">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">返回登录</a></p>
+			</div> <!-- cd-reset-password -->
+			<a href="#0" class="cd-close-form">关闭</a>
+		</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
+
+<script src="js/modernizr.js"></script> <!-- Modernizr -->
+<script src="js/main.js"></script> <!-- Gem jQuery -->
+
+
 </body>
 </html>
