@@ -91,11 +91,26 @@ jQuery(document).ready(function($){
 	//REMOVE THIS - it's just to show error messages 
 	formLogin.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
-		formLogin.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
+        $.post( "/users/login/local.do", {
+            username: formLogin.find('input[id="signin-username"]').text.replace(/\s+/),
+            password: formLogin.find('input[id="signin-password"]').text.replace(/\s+/)
+        }).done(function( data ) {
+                alert( "login Data Loaded: " + data );
+        });
+
+		//formLogin.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
 	});
 	formSignup.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
-		formSignup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
+
+        $.post( "/users/register/local.do", {
+            username: formLogin.find('input[id="signup-username"]').text.replace(/\s+/),
+            password: formLogin.find('input[id="signup-password"]').text.replace(/\s+/)
+        }).done(function( data ) {
+            alert( "register Data Loaded: " + data );
+        });
+
+        //formSignup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
 	});
 
 
